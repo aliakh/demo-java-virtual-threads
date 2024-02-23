@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charSet="UTF-8"/>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        table {
+            font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container col-md-4">
+
+    <p></p>
+
+    <table class="table table-bordered table-sm">
+        <tbody>
+        <tr>
+            <td>Parameter
+            </td>
+            <td>Platform threads
+            </td>
+            <td>Virtual threads
+            </td>
+        </tr>
+        <tr>
+            <td>stack size
+            </td>
+            <td>1 MB
+            </td>
+            <td>resizable
+            </td>
+        </tr>
+        <tr>
+            <td>startup time
+            </td>
+            <td>&gt; 1000 µs
+            </td>
+            <td>1-10 µs
+            </td>
+        </tr>
+        <tr>
+            <td>context switching time
+            </td>
+            <td>1-10 µs
+            </td>
+            <td>~ 0.2 µs
+            </td>
+        </tr>
+        <tr>
+            <td>number
+            </td>
+            <td>&lt; 5000
+            </td>
+            <td>millions
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container col-md-10">
+
+    <table class="table table-bordered table-sm">
+        <tbody>
+        <tr>
+            <td>Modifier and type
+            </td>
+            <td>Method
+            </td>
+            <td>Description
+            </td>
+        </tr>
+        <tr>
+            <td><em>final boolean</em>
+            </td>
+            <td><em>isVirtual()</em>
+            </td>
+            <td>Returns <em>true</em> if this thread is a virtual thread.
+            </td>
+        </tr>
+        <tr>
+            <td><em>static Thread.Builder.OfVirtual</em>
+            </td>
+            <td><em>ofVirtual()</em>
+            </td>
+            <td>Returns a builder for creating a virtual <em>Thread</em> or <em>ThreadFactory</em> that creates virtual threads.
+            </td>
+        </tr>
+        <tr>
+            <td><em>static Thread</em>
+            </td>
+            <td><em>startVirtualThread(Runnable)</em>
+            </td>
+            <td>Creates a virtual thread to execute a task and schedules it to execute.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
