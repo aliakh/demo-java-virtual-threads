@@ -1,0 +1,36 @@
+@startuml
+
+scale 1.2
+
+<style>
+    card {
+        LineColor transparent
+    }
+}
+</style>
+
+skinparam {
+    defaultTextAlignment center
+    roundCorner 0
+    CardBackgroundColor transparent
+    RectangleBackgroundColor transparent
+    RectangleFontName Source Sans Pro
+    RectangleFontStyle normal
+}
+
+rectangle "<i>public</i>\njava.lang.Thread" as Thread
+rectangle SubClass1
+rectangle SubClass2
+card "..." as SubClass3
+rectangle SubClassN
+rectangle "<i>sealed abstract</i>\njava.lang.BaseVirtualThread" as BaseVirtualThread
+rectangle "<i>final</i>\njava.lang.VirtualThread" as VirtualThread
+
+Thread -down- SubClass1
+Thread -down- SubClass2
+Thread -down[hidden]- SubClass3
+Thread -down- SubClassN
+Thread -down- BaseVirtualThread
+BaseVirtualThread -down- VirtualThread
+
+@enduml
